@@ -5,8 +5,10 @@ xrdb $HOME/.Xdefaults
 
 xsetroot -cursor_name left_ptr
 
+xset r rate 220 56
+
 # Starts urxvt server
 urxvtd -q -f -o
-#urxvtc -e $HOME/.tmux/menu &
+urxvtc -e $HOME/.tmux/menu &
 
 exec xmonad

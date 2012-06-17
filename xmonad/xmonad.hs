@@ -19,7 +19,7 @@ main = xmonad $ withUrgencyHook dzenUrgencyHook { args = ["-bg", "darkgreen", "-
 myWorkspaces = ["1:system","2:main","3:network"] ++ map show [4..6]
 
 myConfig = defaultConfig {
-      terminal   = "urxvtc"
+      terminal   = "urxvtc -e ~/.tmux/menu"
     , modMask    = mod1Mask -- Alt
     , layoutHook = smartBorders $ noBorders Full
     , workspaces = myWorkspaces

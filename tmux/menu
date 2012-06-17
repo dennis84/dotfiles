@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+projects=$(ls -l ~/.tmuxinator/| grep "^-" | awk {'print $9'} | cut -d. -f1)
+
+project=$(echo $projects | dmenu -p "TMUX workspace")
+
+[ -z "$project" ] && exit
+
+mux "$project"
