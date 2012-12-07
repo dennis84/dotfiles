@@ -1,0 +1,11 @@
+# ~/.tmuxinator/learn_backbone.yml
+
+project_name: learn-backbone
+project_root: ~/projects/learn-backbone
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+            - cd ~/projects/learn-backbone && php -S localhost:8000
+            - cd ~/projects/learn-backbone
+  - shell: cd ~/projects/learn-backbone

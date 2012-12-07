@@ -1,0 +1,11 @@
+# ~/.tmuxinator/pastel.yml
+
+project_name: muh
+project_root: ~/projects/muh
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+            - cd ~/projects/muh && ~/code/elasticsearch/bin/elasticsearch && play
+            - cd ~/projects/muh
+  - shell: cd ~/projects/muh

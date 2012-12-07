@@ -1,0 +1,11 @@
+# ~/.tmuxinator/pastel.yml
+
+project_name: translator
+project_root: ~/projects/translator
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+            - cd ~/projects/translator && ~/code/elasticsearch/bin/elasticsearch && play
+            - cd ~/projects/translator
+  - shell: cd ~/projects/translator
