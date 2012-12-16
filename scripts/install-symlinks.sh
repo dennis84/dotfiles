@@ -24,3 +24,4 @@ link xcolors ~/.xcolors
 link tmux.conf ~/.tmux.conf
 link tmux ~/.tmux
 link tmuxinator ~/.tmuxinator
+link zshrc ~/.zshrc
