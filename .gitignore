@@ -1,2 +1,6 @@
 zsh/zsh-syntax-highlighting
 zsh/zsh-history-substring-search
+#xmonad/xmonad-*
+#xmonad/xmonad.errors
+#xmonad/xmonad.hi
+#xmonad/xmonad.o
