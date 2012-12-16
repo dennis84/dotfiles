@@ -28,8 +28,3 @@ alias grhh='git reset --hard HEAD'
 alias gslr='git-stash-pull-rebase'
 alias gslrp='git-stash-pull-rebase && git push'
 alias gw='git wtf'
-
-# Override aliases with functions
-# to keep autocompletion
-function gl(){git-up "$@"}
-function glr(){git-up --rebase "$@"}
