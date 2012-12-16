@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Export some variables
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
