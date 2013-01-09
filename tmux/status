@@ -1,61 +1,69 @@
 #!/bin/zsh
-# 0 black
-# 1 red
-# 2 green
-# 3 yellow
-# 4 blue
-# 5 pink
-# 6 cyan
-# 9 orange
-# black -> white 8 0 10 11 12 14 7 15 
-
-separator=" #[fg=blue]- #[default]"
 
 # BATTERY
-infos=$(acpi -b)
-percent=$(echo $infos|sed "s/Battery .: [a-z]*, \([0-9]*\)%\(,.*\|$\)/\1/i")
-state=$(echo $infos|sed "s/Battery .: \([a-z]*\),.*/\1/i")
-if [ "$percent" -lt 5 ]; then modifier="#[bg=colour1,fg=colour15,bright]"
-elif [ "$percent" -lt 20 ]; then modifier="#[bg=colour3,fg=colour8,bright]"
-elif [ "$percent" -lt 50 ]; then modifier="#[fg=colour3]"
-else modifier="#[fg=colour2]"
-fi
-percent="$percent%"
-case $state in
-  "Charging") sign="|+|"; modifier="#[fg=green]" ;;
-"Discharging") sign="|-|" ;;
-    "Full") sign="⚡"; percent= ;;
-  *) sign="$state" ;;
-esac
-printf "#[fg=blue]⚡ $modifier%s%s#[default]" "$percent" "$sign"
+print_battery() {
+  BATPATH=/sys/class/power_supply/BAT0
+  if [ ! -d $BATPATH ]; then
+    BATPATH=/sys/class/power_supply/BAT1
+  fi
+  STATUSPATH=$BATPATH/status
+  BAT_FULL=$BATPATH/charge_full
+  if [ ! -r $BAT_FULL ]; then
+    BAT_FULL=$BATPATH/energy_full
+  fi
+  BAT_NOW=$BATPATH/charge_now
+  if [ ! -r $BAT_NOW ]; then
+    BAT_NOW=$BATPATH/energy_now
+  fi
 
-printf $separator
+  bf=$(cat $BAT_FULL)
+  bn=$(cat $BAT_NOW)
+  st=$(cat $STATUSPATH)
+  pct=$((100 * $bn / $bf))
+
+  case $st in
+    "Charging") sign="+" ;;
+    "Discharging") sign="↓" ;;
+    "Full") sign="-" ;;
+    *) sign="$st" ;; 
+  esac
+
+  if [ "$pct" -lt 5 ]; then color="#[fg=red]"
+  elif [ "$pct" -lt 20 ]; then color="#[fg=yellow]"
+  else color="#[fg=blue]"
+  fi
+
+  printf "#[fg=blue]Battery %s %s" "$pct%" "$color$sign"
+}
 
 # TEMPERATURE
-input=/sys/class/hwmon/hwmon0/temp1_input
-[ -s "$input" ] && temperature=$(awk '{printf "%0.f",$1/1000}' "$input")
-if [ -n "$temperature" ]; then
-  if [ "$temperature" -gt 69 ]; then modifier="#[bg=colour1,fg=colour15,bright]"
-  elif [ "$temperature" -gt 62 ]; then modifier="#[fg=colour13,bright]"
-  elif [ "$temperature" -gt 54 ]; then modifier="#[fg=colour6]"
-  else modifier="#[fg=colour4]"
+print_temperature() {
+  input=/sys/class/hwmon/hwmon0/temp1_input
+  [ -s "$input" ] && temperature=$(awk '{printf "%0.f",$1/1000}' "$input")
+  if [ -n "$temperature" ]; then
+    if [ "$temperature" -gt 69 ]; then modifier="#[fg=red]"
+    elif [ "$temperature" -gt 62 ]; then modifier="#[fg=yellow]"
+    elif [ "$temperature" -gt 54 ]; then modifier="#[fg=green]"
+    else modifier="#[fg=blue]"
+    fi
+    printf "#[fg=blue]Temp %s°#[default]" "$modifier$temperature"
   fi
-  printf "#[fg=blue]☢ %s%s°#[default]" "$modifier" "$temperature"
-fi
-
-printf $separator
+}
 
 # MEMORY
-memory=$(free | awk '/buffers\/cache:/ {printf "%.0f", 100*$3/($3 + $4)}')
-if [ "$memory" -gt 90 ]; then modifier="#[bg=colour1,fg=colour15,bright]"
-elif [ "$memory" -gt 80 ]; then modifier="#[bg=colour3,fg=colour0]"
-elif [ "$memory" -gt 70 ]; then modifier="#[fg=colour9]"
-else modifier="#[fg=colour2]"
-fi
-printf "#[fg=blue]♺ %s%s%%#[default]" "$modifier" "$memory"
-
-printf $separator
+print_memory() {
+  memory=$(free | awk '/buffers\/cache:/ {printf "%.0f", 100*$3/($3 + $4)}')
+  if [ "$memory" -gt 90 ]; then modifier="#[fg=red]"
+  elif [ "$memory" -gt 80 ]; then modifier="#[fg=yellow]"
+  elif [ "$memory" -gt 70 ]; then modifier="#[fg=green]"
+  else modifier="#[fg=blue]"
+  fi
+  printf "#[fg=blue]RAM %s%s%%#[default]" "$modifier" "$memory"
+}
 
 # GERMAN DATE
-#export TZ="Europe/Berlin"
-printf " #[fg=colour12]$(date +"%a %b %d") $(date +"%H:%M")#[default]"
+print_date() {
+  printf "#[fg=colour12]$(date +"%a %b %d") $(date +"%H:%M")#[default]"
+}
+
+echo "$(print_battery)   $(print_temperature)   $(print_memory)   $(print_date)"

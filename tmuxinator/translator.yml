@@ -6,6 +6,6 @@ tabs:
   - main:
         layout: even-horizontal
         panes:
-            - cd ~/projects/translator && ~/code/elasticsearch/bin/elasticsearch && play
             - cd ~/projects/translator
+            - cd ~/projects/translator && ~/code/elasticsearch/bin/elasticsearch && play
   - shell: cd ~/projects/translator

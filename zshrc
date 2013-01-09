@@ -25,3 +25,6 @@ autoload -U compinit
 compinit -i
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# <Ctrl>+ws don't work in vim
+stty -ixon -ixoff
