@@ -1,5 +1,8 @@
 setxkbmap -layout de
 
+# I hate caps lock!
+setxkbmap -option ctrl:nocaps
+
 # Load X defaults
 xrdb $HOME/.Xdefaults
 
