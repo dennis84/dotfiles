@@ -26,3 +26,4 @@ link tmux ~/.tmux
 link tmuxinator ~/.tmuxinator
 link zshrc ~/.zshrc
 link agignore ~/.agignore
+link mongo-hacker/mongo_hacker.js ~/.mongorc.js
