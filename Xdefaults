@@ -10,10 +10,10 @@ Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
-!URxvt.font:       xft:UbuntuMono:size:12
-!URxvt.boldFont:   xft:UbuntuMono:size=12
-URxvt.font:       xft:UbuntuMono:size=12
-URxvt.boldFont:   xft:UbuntuMono:size=12
+!URxvt.font:       xft:Inconsolata:size:16
+!URxvt.boldFont:   xft:Inconsolata:size=16
+URxvt.font:       xft:Inconsolata:size=16
+URxvt.boldFont:   xft:Inconsolata:size=16
 
 URxvt.scrollBar:  false
 URxvt.jumpScroll: true

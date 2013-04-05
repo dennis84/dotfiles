@@ -13,10 +13,10 @@ export PATH="/usr/bin/vendor_perl:$PATH"
 # Export common variables
 export PATH="$HOME/bin:$PATH"
 export PATH="$DOTFILES/scripts:$PATH"
-export PATH="$HOME/code/Play20:$PATH"
+export PATH="$HOME/code/play:$PATH"
 
 # Ruby gems in the path
-export PATH="$HOME/.gem/ruby/1.9.1/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 
 # Ruby bundler, put gems in the user home
-export GEM_HOME="$HOME/.gem/ruby/1.9.1"
+export GEM_HOME="$HOME/.gem/ruby/2.0.0"

@@ -1,5 +1,3 @@
-setxkbmap -layout de
-
 # I hate caps lock!
 setxkbmap -option ctrl:nocaps
 
