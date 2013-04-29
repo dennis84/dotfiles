@@ -12,4 +12,6 @@ xset r rate 220 56
 urxvtd -q -f -o
 urxvtc -e $HOME/.tmux/menu &
 
+pulseaudio --start
+
 exec xmonad

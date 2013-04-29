@@ -24,3 +24,6 @@ myConfig = defaultConfig {
     , layoutHook = smartBorders $ noBorders Full
     , workspaces = myWorkspaces
   }
+  `additionalKeysP` [
+      ("M-a",   spawn "urxvtc -e pacmixer")
+  ]
