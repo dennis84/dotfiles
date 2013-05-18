@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 DOTFILES=$HOME/dotfiles
-OHMYZSH=$HOME/.oh-my-zsh
+OHMYZSH=$HOME/dotfiles/zsh/oh-my-zsh
 
 # Load all of the config files in oh-my-zsh that end in .zsh
 for config_file ($OHMYZSH/lib/*.zsh) source $config_file
