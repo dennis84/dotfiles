@@ -1,0 +1,11 @@
+# ~/.tmuxinator/bookz.yml
+
+project_name: scala-arango
+project_root: ~/projects/scala-arango
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+          - cd ~/projects/scala-arango; and vim
+          - cd ~/projects/scala-arango; and sbt
+  - shell: cd ~/projects/scala-arango

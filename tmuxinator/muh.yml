@@ -6,6 +6,6 @@ tabs:
   - main:
         layout: even-horizontal
         panes:
-            - cd ~/projects/muh && ~/code/elasticsearch/bin/elasticsearch && vim
-            - cd ~/projects/muh && play
+            - cd ~/projects/muh; and ~/code/elasticsearch/bin/elasticsearch; and vim
+            - cd ~/projects/muh; and play
   - shell: cd ~/projects/muh

@@ -1,9 +1,15 @@
-#!/bin/zsh
+#!/usr/bin/fish
 
-projects=$(ls -l ~/.tmuxinator/| grep "^-" | awk {'print $9'} | cut -d. -f1)
+set projects ""
 
-project=$(echo $projects | dmenu -p "TMUX workspace")
+for i in ~/.tmuxinator/*
+  set projects $projects(echo (basename $i .yml)"\n")
+end
 
-[ -z "$project" ] && exit
+set project (echo -e $projects | dmenu -p "TMUX workspace")
 
-mux "$project"
+if [ -z $project ]
+  exit
+end
+
+mux $project

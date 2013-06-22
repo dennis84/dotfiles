@@ -7,5 +7,5 @@ tabs:
         layout: even-horizontal
         panes:
             - cd ~/projects/translator
-            - cd ~/projects/translator && play
+            - cd ~/projects/translator; and play
   - shell: cd ~/projects/translator
