@@ -28,3 +28,5 @@ link agignore ~/.agignore
 link mongo-hacker/mongo_hacker.js ~/.mongorc.js
 link fish/config.fish ~/.config/fish/config.fish
 link fish/functions ~/.config/fish/functions
+
+exit 0
