@@ -1,6 +1,0 @@
-# ~/.tmuxinator/gameop.yml
-
-project_name: gameop
-project_root: ~/projects/gameop
-tabs:
-  - shell: cd ~/projects/gameop

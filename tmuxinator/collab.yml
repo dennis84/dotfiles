@@ -1,0 +1,11 @@
+# ~/.tmuxinator/collab.yml
+
+project_name: collab
+project_root: ~/projects/collab
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+            - cd ~/projects/collab; and vim
+            - cd ~/projects/collab; and sbt
+  - shell: cd ~/projects/collab

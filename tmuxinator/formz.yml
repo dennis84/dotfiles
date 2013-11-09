@@ -1,0 +1,11 @@
+# ~/.tmuxinator/formz.yml
+
+project_name: formz
+project_root: ~/projects/formz
+tabs:
+  - main:
+        layout: even-horizontal
+        panes:
+            - cd ~/projects/formz; and vim
+            - cd ~/projects/formz; and watch --color phpunit
+  - shell: cd ~/projects/formz
