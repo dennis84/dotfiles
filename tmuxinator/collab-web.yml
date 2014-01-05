@@ -1,11 +1,11 @@
-# ~/.tmuxinator/collab.yml
+# ~/.tmuxinator/collab-web.yml
 
-project_name: collab-web
-project_root: ~/projects/collab-web
-tabs:
-  - main:
-        layout: even-horizontal
+name: collab-web
+root: ~/projects/collab-web
+windows:
+  - editor:
+        layout: main-vertical
         panes:
-            - cd ~/projects/collab-web; and vim
-            - cd ~/projects/collab-web; and php -S localhost:8000
-  - shell: cd ~/projects/collab-web
+            - vim
+            - gulp
+  - server: php -S localhost:8000

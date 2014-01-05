@@ -1,7 +1,6 @@
 # ~/.tmuxinator/dotfiles.yml
 
-project_name: dotfiles
-project_root: ~/dotfiles
-tabs:
-  - ranger: cd ~/dotfiles; and vim
-  - shell: cd ~/dotfiles
+name: dotfiles
+root: ~/dotfiles
+windows:
+  - editor: vim

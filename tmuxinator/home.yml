@@ -1,6 +1,6 @@
 # ~/.tmuxinator/home.yml
 
-project_name: home
-project_root: ~/
-tabs:
+name: home
+root: ~/
+windows:
   - shell: cd ~/
