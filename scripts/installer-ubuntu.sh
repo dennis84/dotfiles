@@ -4,7 +4,7 @@
 # wget -qO- https://raw.github.com/dennis84/dotfiles/master/scripts/installer-ubuntu.sh | sh
 
 # install some common packages
-sudo apt-get -y install tig fish build-essential python-dev
+sudo apt-get -y install tig fish build-essential python-dev python-pip
 
 # install dotfiles
 cd ~
@@ -63,6 +63,9 @@ sudo apt-get -y install cmake
 cd bundle/YouCompleteMe
 ./install.sh
 
+# used by vim-collab
+sudo pip install websocket-client
+
 # install the silver searcher
 cd ~/code
 sudo apt-get -y install automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
@@ -72,4 +75,5 @@ cd the_silver_searcher
 sudo make install
 
 # enable fish shell
-chsh -s /usr/bin/fish
+# TODO: Find a way without entering a password
+chsh -s /usr/bin/fish vagrant
