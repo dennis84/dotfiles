@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Installation:
+# wget -qO- https://raw.github.com/dennis84/dotfiles/master/scripts/installer-ubuntu.sh | sh
+
 # install some common packages
 sudo apt-get -y install tig fish build-essential python-dev
 
