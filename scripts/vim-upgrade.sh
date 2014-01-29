@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ~/vim
+cd ~/code/vim
 
 hg update --clean
 hg pull
@@ -8,8 +8,13 @@ hg update
 
 cd src
 
+# Lua required!
+# sudo pacman -S lua luajit
+
 ./configure \
---with-features=normal \
+--with-features=huge \
+--enable-luainterp \
+--with-luajit \
 --enable-rubyinterp \
 --enable-multibyte \
 --enable-cscope \
