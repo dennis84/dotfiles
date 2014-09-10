@@ -1,0 +1,9 @@
+[user]
+  name = Dennis Dietrich
+  email = d.dietrich84@gmail.com
+
+[core]
+  excludesfile = ~/dotfiles/gitignore
+
+[github]
+  user = dennis84
