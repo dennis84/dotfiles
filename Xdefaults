@@ -10,10 +10,10 @@ Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
 
-!URxvt.font:       xft:CosmicSansNeueMono.ttf
-!URxvt.boldFont:   xft:CosmicSansNeueMono:size=16
-URxvt.font:       xft:CosmicSansNeueMono:size=16
-URxvt.boldFont:   xft:CosmicSansNeueMono:size=16
+!URxvt.font:       xft:FantasqueSansMono.ttf
+!URxvt.boldFont:   xft:FantasqueSansMono:size=19
+URxvt.font:       xft:FantasqueSansMono:size=19
+URxvt.boldFont:   xft:FantasqueSansMono:size=19
 
 URxvt.scrollBar:  false
 URxvt.jumpScroll: true

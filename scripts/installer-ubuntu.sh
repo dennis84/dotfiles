@@ -15,6 +15,11 @@ git clone https://github.com/dennis84/dotfiles.git
 # install vim
 cd ~
 sudo apt-get -y install mercurial
+
+# neocomplete needs lua support
+sudo apt-get -y install luajit and libluajit-5.1-dev libluajit-5.1
+sudo ln -s /usr/bin/luajit-2.0.0-beta9 /usr/bin/luajit
+
 mkdir code
 cd code
 hg clone https://vim.googlecode.com/hg/ vim
@@ -28,7 +33,9 @@ hg update
 cd src
 
 ./configure \
---with-features=normal \
+--with-features=huge \
+--enable-luainterp \
+--with-luajit \
 --enable-rubyinterp \
 --enable-multibyte \
 --enable-cscope \
@@ -58,10 +65,6 @@ git clone https://github.com/dennis84/vim-config.git
 cd vim-config
 ./install.sh
 vim +BundleInstall! +qall
-
-sudo apt-get -y install cmake
-cd bundle/YouCompleteMe
-./install.sh
 
 # used by vim-collab
 sudo pip install websocket-client
