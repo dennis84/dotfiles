@@ -11,6 +11,7 @@ function git_dirty
 end
 
 function fish_prompt
+  printf '%sλ %s' (set_color red) (set_color normal)
   printf '%s%s%s ' (prompt_pwd) (set_color normal)
   
   set -l branch (current_git_branch)

@@ -24,6 +24,7 @@ link xcolors ~/.xcolors
 link tmux.conf ~/.tmux.conf
 link tmux ~/.tmux
 link tmuxinator ~/.tmuxinator
+link gitconfig ~/.gitconfig
 link agignore ~/.agignore
 link mongo-hacker/mongo_hacker.js ~/.mongorc.js
 link fish/config.fish ~/.config/fish/config.fish
