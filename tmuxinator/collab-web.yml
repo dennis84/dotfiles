@@ -8,4 +8,5 @@ windows:
         panes:
             - vim
             - gulp
-  - server: php -S localhost:8000
+  - server: http-server
+  - collab: cd ~/projects/collab; sbt run

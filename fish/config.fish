@@ -7,8 +7,8 @@ set -x PATH "/root/.gem/ruby/2.0.0/bin" $PATH
 set -x PATH "$HOME/.cabal/bin" $PATH
 set -x PATH "/usr/local/heroku/bin" $PATH
 
-
 set -x GEM_HOME "$HOME/.gem/ruby/2.0.0"
+set -x ANDROID_HOME "$HOME/code/android"
 
 set -x EDITOR "vim"
 set -x BROWSER "chromium"
