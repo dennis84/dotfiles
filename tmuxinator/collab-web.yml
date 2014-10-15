@@ -9,4 +9,4 @@ windows:
             - vim
             - gulp
   - server: http-server
-  - collab: cd ~/projects/collab; sbt run
+  - collab: cd ~/projects/collab; cabal run
