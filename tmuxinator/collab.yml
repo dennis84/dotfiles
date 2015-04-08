@@ -1,10 +1,16 @@
 # ~/.tmuxinator/collab.yml
 
 name: collab
-root: ~/projects/collab
+root: ~/projects/collab-web
 windows:
-  - editor:
+  - web:
         layout: main-vertical
         panes:
             - vim
-            - cabal run
+            - gulp
+  - backend:
+        layout: main-vertical
+        panes:
+            - cd ~/projects/collab; vim
+            - cd ~/projects/collab; cabal run
+  - server: http-server

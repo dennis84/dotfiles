@@ -1,0 +1,11 @@
+# ~/.tmuxinator/quit.yml
+
+name: quit
+root: ~/projects/quit
+windows:
+  - main:
+        layout: main-vertical
+        panes:
+            - vim
+            - sbt
+            - cd ~/code/android; platform-tools/adb logcat
