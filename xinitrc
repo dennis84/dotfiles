@@ -10,7 +10,6 @@ xset r rate 220 56
 
 # Starts urxvt server
 urxvtd -q -f -o
-#urxvtc -e $HOME/.tmux/menu &
 
 # pulseaudio --start
 
