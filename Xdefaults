@@ -5,15 +5,10 @@ Xcursor.theme: CG
 #include "/home/dennis/.xcolors/solarized.xcolors"
 
 ! Fonts 
-Xft.antialias: true
-Xft.hinting:   true
-Xft.rgba:      rgb
-Xft.hintstyle: hintfull
-
-!URxvt.font:       xft:FiraMono-Regular.ttf
-!URxvt.boldFont:   xft:FiraMono-Regular:size=19
-URxvt.font:       xft:FiraMono-Regular:size=19
-URxvt.boldFont:   xft:FiraMono-Regular:size=19
+URxvt.font:        xft:FiraMono-Regular:size=19:antialias=true:hinting=true:style=medium
+URxvt.boldFont:    xft:FiraMono-Regular:size=19:antialias=true:hinting=true:style=bold
+URxvt.letterSpace: -3
+URxvt.lineSpace:   1
 
 URxvt.scrollBar:  false
 URxvt.jumpScroll: true
@@ -23,10 +18,6 @@ URxvt.visualBell: false
 
 URxvt.depth:       24
 URxvt.buffered:    true
-!URxvt.foreground:  #f0f0f0
-!URxvt.background:  #000000
-URxvt.transparent: false
-URxvt.shading:     100
 
 URxvt.intensityStyles: true
 URxvt.termName:        rxvt-256color

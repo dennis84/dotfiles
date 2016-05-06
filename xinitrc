@@ -1,5 +1,5 @@
 # I hate caps lock!
-setxkbmap -option ctrl:nocaps
+setxkbmap -option caps:none
 
 # Load X defaults
 xrdb $HOME/.Xdefaults
@@ -10,6 +10,8 @@ xset r rate 220 56
 
 # Starts urxvt server
 urxvtd -q -f -o
+
+sh $HOME/.fehbg &
 
 # pulseaudio --start
 
