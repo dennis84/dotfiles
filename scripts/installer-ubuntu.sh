@@ -9,7 +9,6 @@ sudo apt-get -y install tig fish build-essential python-dev python-pip
 # install dotfiles
 cd ~
 git clone https://github.com/dennis84/dotfiles.git
-./dotfiles/scripts/install-vendors.sh
 ./dotfiles/scripts/install-symlinks.sh
 
 # install vim

@@ -10,8 +10,8 @@ xset r rate 220 56
 
 # Starts urxvt server
 urxvtd -q -f -o
-urxvtc -e $HOME/.tmux/menu &
+#urxvtc -e $HOME/.tmux/menu &
 
-pulseaudio --start
+# pulseaudio --start
 
-exec xmonad
+exec i3

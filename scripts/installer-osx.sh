@@ -36,7 +36,6 @@ sudo pip install websocket-client
 # install dotfiles
 cd ~
 git clone https://github.com/dennis84/dotfiles.git
-./dotfiles/scripts/install-vendors.sh
 
 # Create symlinks
 SCRIPT=`readlink -f $0`
