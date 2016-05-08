@@ -18,3 +18,12 @@ Section "InputClass"
         Option "NaturalScrolling" "on"
 EndSection
 ```
+
+## WiFi
+
+```
+# create a profile
+sudo wifi-menu
+# auto connect
+sudo netctl enable profile
+```
