@@ -20,7 +20,7 @@ function fish_prompt
     printf '%s±(%s%s %s%s%s)' (set_color normal) (set_color green) $branch (set_color cyan) (current_git_sha) (set_color normal)
 
     if git_dirty
-      printf ' %s★' (set_color red)
+      printf ' %s*' (set_color red)
     end
 
     echo -n " "

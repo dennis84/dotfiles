@@ -105,4 +105,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command i3status
+  colors {
+    background #00141a
+  }
 }
