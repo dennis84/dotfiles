@@ -2,7 +2,7 @@
 Xcursor.theme: CG
 
 ! Colors
-#include "/home/dennis/.xcolors/solarized.xcolors"
+#include "/home/dennis/.xcolors/solarized-light.xcolors"
 
 ! Fonts 
 URxvt.font:        xft:FiraMono-Regular:size=19:antialias=true:hinting=true:style=medium
