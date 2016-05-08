@@ -1,3 +1,9 @@
+## VIM
+
+```
+sudo pacman -S nvim
+```
+
 ## Touchpad
 
 ```
