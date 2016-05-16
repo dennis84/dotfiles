@@ -2,6 +2,7 @@
 
 ```
 sudo pacman -S nvim
+sudo pacman -S python2-neovim python-neovim
 ```
 
 ## Touchpad

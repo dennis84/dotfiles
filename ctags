@@ -1,0 +1,14 @@
+--exclude=.git
+--exclude=dist
+--exclude=target
+--exclude=project
+--exclude=public
+--exclude=assets
+--exclude=node_modules
+--langdef=scala
+--langmap=scala:.scala
+--regex-scala=/def[ \t]+([^(=[({ ]+)/\1/d,definition/
+--regex-scala=/class[ \t]+([^[( {]+)/\1/c,class/
+--regex-scala=/trait[ \t]+([^[( {]+)/\1/t,trait/
+--regex-scala=/object[ \t]+([^ {]+)/\1/o,object/
+--regex-scala=/val[ \t]+([^= ]+)/\1/v,val/

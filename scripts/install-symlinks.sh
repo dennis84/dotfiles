@@ -30,5 +30,6 @@ link gitconfig ~/.gitconfig
 link agignore ~/.agignore
 link fish/config.fish ~/.config/fish/config.fish
 link fish/functions ~/.config/fish/functions
+link ctags ~/.ctags
 
 exit 0

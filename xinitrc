@@ -13,6 +13,4 @@ urxvtd -q -f -o
 
 sh $HOME/.fehbg &
 
-# pulseaudio --start
-
 exec i3
