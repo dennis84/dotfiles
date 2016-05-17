@@ -31,5 +31,6 @@ link agignore ~/.agignore
 link fish/config.fish ~/.config/fish/config.fish
 link fish/functions ~/.config/fish/functions
 link ctags ~/.ctags
+link redshift/redshift.conf ~/.config/redshift.conf
 
 exit 0
