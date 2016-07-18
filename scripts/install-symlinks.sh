@@ -25,6 +25,7 @@ link tmux.conf ~/.tmux.conf
 link tmux ~/.tmux
 link tmuxinator ~/.tmuxinator
 link gitconfig ~/.gitconfig
+link gitignore ~/.gitignore_global
 link agignore ~/.agignore
 link fish/config.fish ~/.config/fish/config.fish
 link fish/functions ~/.config/fish/functions
