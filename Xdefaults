@@ -5,8 +5,8 @@ Xcursor.theme: CG
 #include "/home/dennis/.xcolors/solarized-light.xcolors"
 
 ! Fonts 
-URxvt.font:        xft:FiraMono-Regular:size=19:antialias=true:hinting=true:style=medium
-URxvt.boldFont:    xft:FiraMono-Regular:size=19:antialias=true:hinting=true:style=bold
+URxvt.font:        xft:Fira Code:size=19:antialias=true:hinting=true:style=medium
+URxvt.boldFont:    xft:Fira Code:size=19:antialias=true:hinting=true:style=bold
 URxvt.letterSpace: -3
 URxvt.lineSpace:   1
 
