@@ -28,3 +28,9 @@ sudo wifi-menu
 # auto connect
 sudo netctl enable profile
 ```
+
+# Fonts
+
+```
+cp fonts/* /usr/share/fonts
+```
