@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:FiraCode 12
+font pango:Fira Code 12
 
 # hide window title bar
 for_window [class="^.*"] border pixel 1
@@ -10,7 +10,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill

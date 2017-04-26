@@ -34,3 +34,11 @@ sudo netctl enable profile
 ```
 cp fonts/* /usr/share/fonts
 ```
+
+# Alacritty
+
+```bash
+git clone https://aur.archlinux.org/alacritty-git.git
+cd alacritty-git
+makepkg -isr
+```
