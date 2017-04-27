@@ -13,11 +13,9 @@ link() {
   ln -s "$from" "$to"
 }
 
-link Xdefaults ~/.Xdefaults
 link xinitrc ~/.xinitrc
-link i3 ~/.config
+link i3 ~/.config/i3
 link i3status.conf ~/.i3status.conf
-link xcolors ~/.xcolors
 link tmux.conf ~/.tmux.conf
 link tmux ~/.tmux
 link gitconfig ~/.gitconfig
