@@ -1,27 +1,14 @@
 #!/bin/bash
 
-script_path="$(dirname "$0")"
-
-echo "Linking config files from $script_path"
-
-link() {
-  local from="$(readlink -f "$script_path/../$1")"
-  local to="$2"
-  printf "ln -s %s %s\n" "$from" "$to"
-
-  rm "$to"
-  ln -s "$from" "$to"
-}
-
-link xinitrc ~/.xinitrc
-link i3 ~/.config/i3
-link i3status.conf ~/.i3status.conf
-link tmux.conf ~/.tmux.conf
-link tmux ~/.tmux
-link gitconfig ~/.gitconfig
-link gitignore ~/.gitignore_global
-link agignore ~/.agignore
-link fish/config.fish ~/.config/fish/config.fish
-link fish/functions ~/.config/fish/functions
-link ctags ~/.ctags
-link alacritty.yml ~/.alacritty.yml
+ln -s ~/dotfiles/xinitrc ~/.xinitrc
+ln -s ~/dotfiles/i3 ~/.config/i3
+ln -s ~/dotfiles/i3status.conf ~/.i3status.conf
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux ~/.tmux
+ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/gitignore ~/.gitignore_global
+ln -s ~/dotfiles/agignore ~/.agignore
+ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
+ln -s ~/dotfiles/ctags ~/.ctags
+ln -s ~/dotfiles/alacritty.yml ~/.alacritty.yml

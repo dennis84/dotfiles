@@ -10,9 +10,20 @@ function git_dirty
   not git diff HEAD --quiet 2>/dev/null
 end
 
+function colored_arrow
+  if test $argv[1] -eq 0
+    printf '%s> %s' (set_color cyan) (set_color normal)
+  else
+    printf '%s> %s' (set_color red) (set_color normal)
+  end
+end
+
 function fish_prompt
-  echo -sn (prompt_pwd)
-  
+  set -l last_status $status
+
+  colored_arrow $last_status
+  printf '%s%s%s ' (prompt_pwd) (set_color normal)
+
   set -l branch (current_git_branch)
 
   if not test -z $branch

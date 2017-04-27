@@ -22,3 +22,9 @@ if status --is-login
     exec startx -- -keeptty
   end
 end
+
+switch (uname)
+  case Darwin
+    set -x OPENSSL_INCLUDE_DIR "/usr/local/opt/openssl/include"
+    set -x DEP_OPENSSL_INCLUDE "/usr/local/opt/openssl/include"
+end
