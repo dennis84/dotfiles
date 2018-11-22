@@ -1,6 +1,4 @@
-# Export path's
-set -x PATH /sbin /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin $PATH
-set -x PATH "$HOME/bin" "$HOME/dotfiles/scripts" $PATH
+set -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/bin $PATH
 set -x PATH "$HOME/.cargo/bin" $PATH
 
 set -x GEM_HOME "$HOME/.cargo/bin"
