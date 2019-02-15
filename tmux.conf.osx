@@ -1,4 +1,4 @@
-set -g default-terminal "xterm-256color"
+set -g default-terminal "xterm-256color-italic"
 
 # ` is an interesting key for a prefix
 set -g prefix `

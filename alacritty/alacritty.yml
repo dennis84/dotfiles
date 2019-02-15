@@ -10,7 +10,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: xterm-256color
+  TERM: xterm-256color-italic
 
 window:
   # Window dimensions (changes require restart)
@@ -100,7 +100,7 @@ font:
     family: Iosevka Term Slab
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   italic:
@@ -111,7 +111,7 @@ font:
     family: Iosevka Term Slab
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Point size
   size: 28.0
@@ -459,7 +459,7 @@ key_bindings:
   - { key: Q,        mods: Command, action: Quit                         }
   - { key: W,        mods: Command, action: Quit                         }
   - { key: Return,   mods: Command, action: ToggleFullscreen             }
-
+  - { key: Space,    mods: Control|Command, command: { program: "sh", args: ["-c", "~/projects/macos-emoji-picker/target/debug/macos-emoji-picker"] } }
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
   - { key: L,        mods: Control, action: ClearLogNotice               }
