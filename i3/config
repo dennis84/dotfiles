@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:Fira Code 12
+font pango:Iosevka Term Slab 12
 
 # hide window title bar
 for_window [class="^.*"] border pixel 1
@@ -106,6 +106,6 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status
   colors {
-    background #00141a
+    background #333333
   }
 }
