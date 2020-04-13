@@ -18,5 +18,3 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 else
   ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 fi
-
-tic xterm-256color-italic.terminfo
