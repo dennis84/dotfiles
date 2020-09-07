@@ -10,6 +10,15 @@ function git_dirty
   not git diff HEAD --quiet 2>/dev/null
 end
 
+function nb_unpushed
+  set -l count (git log --oneline origin/master..HEAD | wc -l | tr -d "[:space:]")
+  if test $count -eq 0
+    echo ""
+  else
+    printf ' %s%s%s' (set_color red) $count (set_color normal)
+  end
+end
+
 function colored_arrow
   if test $argv[1] -eq 0
     printf '%s> %s' (set_color cyan) (set_color normal)
@@ -27,7 +36,11 @@ function fish_prompt
   set -l branch (current_git_branch)
 
   if not test -z $branch
-    printf ' (%s%s %s%s%s)' (set_color green) $branch (set_color cyan) (current_git_sha) (set_color normal)
+    printf ' (%s%s %s%s%s%s%s)' \
+      (set_color green) $branch \
+      (set_color cyan) (current_git_sha) \
+      (set_color normal) (nb_unpushed) \
+      (set_color normal)
 
     if git_dirty
       printf ' %s*%s' (set_color red) (set_color normal)
