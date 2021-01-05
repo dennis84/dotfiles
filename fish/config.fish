@@ -4,7 +4,7 @@ set -x PATH "$HOME/.cargo/bin" $PATH
 set -x GEM_HOME "$HOME/.cargo/bin"
 
 set -x EDITOR "nvim"
-set -x BROWSER "firefox"
+set -x BROWSER "google-chrome"
 
 set fish_greeting ""
 

@@ -1,5 +1,9 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+import:
+  - /home/ddietr/.config/alacritty/dracula.yml
+  #- /home/ddietr/.config/alacritty/soft-era.yml
+
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -115,7 +119,7 @@ font:
     style: Italic
 
   # Point size
-  size: 28.0
+  size: 22.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -145,54 +149,6 @@ font:
   # This is a global setting and will require a log out or restart to take
   # effect.
   use_thin_strokes: true
-
-# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
-
-# Soft-era
-colors:
-  # Default colors
-  primary:
-    background: '0xf9f5f5'
-    foreground: '0xc8b3b3'
-
-  # Normal colors
-  normal:
-    black:   '0x414141'
-    red:     '0xdd698c'
-    green:   '0x25b7b8'
-    yellow:  '0xede7c5'
-    blue:    '0x82b4e3'
-    magenta: '0xce9ae8'
-    cyan:    '0x82b4e3'
-    white:   '0xffffff'
-
-  # Bright colors
-  bright:
-    black:   '0x414141'
-    red:     '0xdb90a7'
-    green:   '0x98c4ba'
-    yellow:  '0xcabf9a'
-    blue:    '0x82b4e3'
-    magenta: '0xcb8dd7'
-    cyan:    '0x82b4e3'
-    white:   '0xffffff'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  indexed_colors: []
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -278,7 +234,7 @@ live_config_reload: true
 #   - (Linux) user login shell
 #   - (Windows) powershell
 shell:
-  program: /usr/local/bin/fish
+  program: /usr/bin/fish
   args:
     - --login
 
@@ -428,7 +384,7 @@ key_bindings:
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  - { key: Return,   mods: Alt,           action: ToggleFullscreen }
 
   # (macOS only)
   #- { key: Key0,   mods: Command,         action: ResetFontSize    }
@@ -442,7 +398,7 @@ key_bindings:
   #- { key: H,      mods: Command,         action: Hide             }
   #- { key: Q,      mods: Command,         action: Quit             }
   #- { key: W,      mods: Command,         action: Quit             }
-  - { key: Return, mods: Command,         action: ToggleSimpleFullscreen }
+  #- { key: Return, mods: Command,         action: ToggleSimpleFullscreen }
 
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
