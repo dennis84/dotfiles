@@ -18,3 +18,5 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 else
   ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 fi
+
+git config --global core.excludesfile ~/.gitignore_global

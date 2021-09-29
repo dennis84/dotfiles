@@ -1,5 +1,6 @@
 set -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/bin $PATH
 set -x PATH "$HOME/.cargo/bin" $PATH
+set -x PATH "$HOME/go/bin" $PATH
 
 set -x GEM_HOME "$HOME/.cargo/bin"
 
