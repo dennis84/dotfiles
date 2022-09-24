@@ -33,4 +33,4 @@ set -sg escape-time 1
 set -g mode-keys vi
 set -g status-keys vi
 
-set-option -g default-shell /usr/local/bin/fish
+set-option -g default-shell /opt/homebrew/bin/fish

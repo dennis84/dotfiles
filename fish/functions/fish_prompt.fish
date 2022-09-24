@@ -11,10 +11,10 @@ function git_dirty
 end
 
 function nb_unpushed
-  git show-branch remotes/origin/master &>/dev/null
-  set -l has_origin_master $status
-  if test $has_origin_master -eq 0
-    set -l count (git log --oneline origin/master..HEAD | wc -l | tr -d "[:space:]")
+  git show-branch remotes/origin/main &>/dev/null
+  set -l has_origin_main $status
+  if test $has_origin_main -eq 0
+    set -l count (git log --oneline origin/main..HEAD | wc -l | tr -d "[:space:]")
     if test $count -eq 0
       echo ""
     else
