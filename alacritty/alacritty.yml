@@ -4,9 +4,11 @@ import:
   #- ~/.config/alacritty/material.yml
   #- ~/.config/alacritty/dracula.yml
   #- ~/.config/alacritty/soft-era.yml
-  - ~/.config/alacritty/gruvbox.yml
+  #- ~/.config/alacritty/gruvbox.yml
   #- ~/.config/alacritty/gruvbox-light.yml
   #- ~/.config/alacritty/solarized-light.yml
+  - ~/.config/alacritty/tokyo-night.yml
+  #- ~/.config/alacritty/tokyo-night-light.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
