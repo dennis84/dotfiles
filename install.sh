@@ -11,6 +11,8 @@ ln -s ~/dotfiles/agignore ~/.agignore
 ln -s ~/dotfiles/fish ~/.config/fish
 ln -s ~/dotfiles/ctags ~/.ctags
 ln -s ~/dotfiles/alacritty ~/.config/alacritty
+ln -s ~/dotfiles/wezterm/config ~/.config/wezterm
+ln -s ~/dotfiles/wezterm/wezterm.lua ~/.wezterm.lua
 
 unamestr="$(uname)"
 if [[ "$unamestr" == 'Darwin' ]]; then

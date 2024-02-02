@@ -1,5 +1,7 @@
 /tags
 ~*
 .eslintrc.json
-/\
 /fish/fish_variables
+.terraform*
+kls_database.db
+
